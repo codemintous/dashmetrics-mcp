@@ -1,0 +1,49 @@
+{
+  "name": "DashMetrics MCP",
+  "provider": "kukapay",
+  "contact": {
+    "email": "contact@kukapay.com",
+    "github": "kukapay"
+  },
+  "server": {
+    "type": "Crypto",
+    "endpoint": "https://your-deployed-server.com/mcp",
+    "transport": "http+sse"
+  },
+  "capabilities": {
+    "tools": [
+      {
+        "name": "calculate_macd",
+        "description": "Calculates Moving Average Convergence Divergence (MACD) for a given cryptocurrency pair",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "symbol": {
+              "type": "string",
+              "description": "Trading pair symbol (e.g., BTC/USDT)"
+            },
+            "timeframe": {
+              "type": "string",
+              "description": "Timeframe for the analysis (e.g., 1h, 4h, 1d)"
+            },
+            "fastPeriod": {
+              "type": "integer",
+              "description": "Fast EMA period"
+            },
+            "slowPeriod": {
+              "type": "integer",
+              "description": "Slow EMA period"
+            },
+            "signalPeriod": {
+              "type": "integer",
+              "description": "Signal line period"
+            }
+          },
+          "required": ["symbol", "timeframe"]
+        }
+      }
+    ]
+  },
+  "repository": "https://github.com/kukapay/dashmetrics-mcp",
+  "tags": ["crypto", "technical-analysis", "trading", "indicators", "metrics", "dashboard"]
+} 

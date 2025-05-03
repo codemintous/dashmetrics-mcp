@@ -1,0 +1,164 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "server_id": "a7e3fcb2-6e12-4a17-9d50-8ac1e562763e",
+  "server_name": "DashMetrics MCP",
+  "provider": {
+    "name": "CodeMinto",
+    "github_username": "codemintous",
+    "website": "https://codeminto.com"
+  },
+  "endpoints": {
+    "base_url": "https://dashmetrics-mcp.codeminto.com",
+    "invoke_path": "/api/crypto/v1/invoke",
+    "version": "1.0",
+    "additional_endpoints": {
+      "healthcheck": "/api/crypto/health",
+      "metrics": "/api/crypto/metrics"
+    }
+  },
+  "capabilities": [
+    {
+      "name": "calculate_macd",
+      "description": "Calculate Moving Average Convergence Divergence (MACD) for a cryptocurrency pair",
+      "parameters": {
+        "symbol": {
+          "type": "string",
+          "description": "Trading pair symbol (e.g., BTC/USDT)"
+        },
+        "timeframe": {
+          "type": "string",
+          "description": "Timeframe for the analysis (e.g., 1h, 4h, 1d)"
+        },
+        "fastPeriod": {
+          "type": "integer",
+          "default": 12,
+          "description": "Fast EMA period"
+        },
+        "slowPeriod": {
+          "type": "integer",
+          "default": 26,
+          "description": "Slow EMA period"
+        },
+        "signalPeriod": {
+          "type": "integer",
+          "default": 9,
+          "description": "Signal line period"
+        }
+      },
+      "response_format": {
+        "macd": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "description": "MACD line values"
+        },
+        "signal": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "description": "Signal line values"
+        },
+        "histogram": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "description": "MACD histogram values"
+        }
+      },
+      "examples": [
+        {
+          "request": {
+            "symbol": "BTC/USDT",
+            "timeframe": "1h",
+            "fastPeriod": 12,
+            "slowPeriod": 26,
+            "signalPeriod": 9
+          },
+          "response": {
+            "macd": [0.5, 0.6, 0.7],
+            "signal": [0.4, 0.5, 0.6],
+            "histogram": [0.1, 0.1, 0.1]
+          }
+        }
+      ]
+    },
+    {
+      "name": "calculate_rsi",
+      "description": "Calculate Relative Strength Index (RSI) for a cryptocurrency pair",
+      "parameters": {
+        "symbol": {
+          "type": "string",
+          "description": "Trading pair symbol (e.g., ETH/USDT)"
+        },
+        "timeframe": {
+          "type": "string",
+          "description": "Timeframe for the analysis (e.g., 1h, 4h, 1d)"
+        },
+        "period": {
+          "type": "integer",
+          "default": 14,
+          "description": "RSI period"
+        }
+      },
+      "response_format": {
+        "rsi": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "description": "RSI values"
+        }
+      },
+      "examples": [
+        {
+          "request": {
+            "symbol": "ETH/USDT",
+            "timeframe": "4h",
+            "period": 14
+          },
+          "response": {
+            "rsi": [45.2, 46.8, 48.3]
+          }
+        }
+      ]
+    }
+  ],
+  "repo_url": "https://github.com/codemintous/sagar-hackthon-submition",
+  "contact_info": {
+    "email": "contact@codeminto.com",
+    "discord": "sagarjethi"
+  },
+  "server_type": "crypto",
+  "fee_structure": {
+    "fee_enabled": false,
+    "fee_model": "fixed",
+    "fee_details": {
+      "fixed_fee": 0
+    },
+    "fee_agreement_version": "1.0"
+  },
+  "tags": [
+    "crypto",
+    "technical-analysis",
+    "trading",
+    "indicators",
+    "metrics"
+  ],
+  "supported_blockchains": [
+    "ethereum",
+    "solana",
+    "polygon",
+    "arbitrum",
+    "optimism"
+  ],
+  "api_rate_limits": {
+    "requests_per_minute": 60,
+    "requests_per_day": 10000
+  },
+  "documentation_url": "https://github.com/codemintous/sagar-hackthon-submition/blob/main/README.md",
+  "version": "1.0.0",
+  "status": "development"
+} 
