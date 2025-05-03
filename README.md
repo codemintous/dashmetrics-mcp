@@ -2,6 +2,11 @@
 
 A powerful MCP server providing comprehensive cryptocurrency technical analysis indicators and strategies, designed to empower AI trading agents with advanced market analysis capabilities.
 
+<img width="1206" alt="Screenshot 2025-05-03 at 5 50 37 PM" src="https://github.com/user-attachments/assets/de0c6bbf-2a1a-4c8a-b2cf-4b013a69045c" />
+
+
+https://github.com/codemintous/dashmetrics-mcp.git
+
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Node.js](https://img.shields.io/badge/Node.js-18.x-green.svg)](https://nodejs.org/)
 ![Status](https://img.shields.io/badge/status-active-brightgreen.svg)
