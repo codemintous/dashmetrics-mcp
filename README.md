@@ -62,7 +62,7 @@ DashMetrics MCP is a Model Context Protocol server that provides a rich set of t
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/kukapay/dashmetrics-mcp.git
+   git clone https://github.com/codemintous/dashmetrics-mcp
    cd dashmetrics-mcp
    ```
 
@@ -172,14 +172,4 @@ To use DashMetrics MCP with an MCP client, configure it with:
 4. Push to the branch
 5. Create a Pull Request
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Support
-
-For support, please:
-- Open an issue on GitHub
-- Contact us at contact@kukapay.com
-- Join our Discord community
 
